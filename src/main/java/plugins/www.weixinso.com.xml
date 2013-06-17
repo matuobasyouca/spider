@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>www.weixinso.com/gzph.asp</indexof>
+		</rule>
+		<links>
+			<link
+				regexp="&lt;a href=&quot;(showxx.asp\?id=\d+)&quot; title=&quot;.*?&quot;&gt;.*?&lt;/a&gt;"></link>
+			<link
+				regexp="&lt;a  href=&quot;(\?1=1&amp;xpageye=x&amp;pageye=\d+)&quot; class=&quot;a&quot;&gt;下一页&lt;/a"></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<indexof>www.weixinso.com/showxx.asp?id=</indexof>
+		</rule>
+		<analyser xpath="//TABLE[@width='349' and @height='210']" save="1">
+			<content
+				xpath="//TABLE[@width='349' and @height='210']"></content>
+		</analyser>
+	</template>
+</templates>

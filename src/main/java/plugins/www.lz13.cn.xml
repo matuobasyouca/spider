@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>www.lz13.cn/lizhi/jingdianyulu.html</indexof>
+		</rule>
+		<links>
+			<link regexp="&lt;h3&gt;&lt;a href=&quot;(http://www.lz13.cn/jingdianyulu/\d+.html)&quot; target=&quot;_blank&quot;&gt;[^&lt;]+&lt;/a&gt;&lt;/h3&gt;"
+				 ></link>
+			<link regexp="&lt;a href=&quot;(http://www.lz13.cn/catalog.asp\?cate=50&amp;page=\d+)&quot;&gt;\d+&lt;/a&gt;"
+				 ></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<indexof>www.lz13.cn/jingdianyulu/</indexof>
+		</rule>
+		<analyser xpath="//DIV[@class='PostContent']" save="1">
+			<title xpath="//TITLE/text()"></title>
+			<content xpath="./P"></content>
+		</analyser>
+	</template>
+</templates>

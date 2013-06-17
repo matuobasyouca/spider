@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>qhwh.com/daohang.asp</indexof>
+			<regexp></regexp>
+			<code></code>
+		</rule>
+		<links>
+			<link regexp="&lt;a href=&quot;(SrcShow.asp\?Src_ID=\d+)&quot;"></link>
+			<link regexp="&lt;a href=.(daohang.asp\?Src_Child=-1&amp;order_by=1&amp;Tags_Name=&amp;Tags_ID=&amp;S_Havving=&amp;Page=\d+&amp;user_id=).&gt;\d+&lt;/a&gt;"></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<indexof>qhwh.com/SrcShow.asp</indexof>
+			<regexp></regexp>
+			<code></code>
+		</rule>
+		<analyser xpath="//DIV[@class='m-srcshow-Desc']" save="1">
+			<title xpath="//DIV[@class='m-srcshow']/DIV[@class='info']/H1/text()"></title>
+			<author xpath="//DIV[@class='dh-current']/A[3]"></author>
+			<content xpath="./DIV[@class='col-c']/DIV[@class='Content']"></content>
+			<publishTime xpath=".//DIV[@class='col-2']/P[2]"></publishTime>
+			<updateTime xpath=".//DIV[@class='col-2']/P[3]"></updateTime>
+			<isTopic xpath=".//DIV[@class='col-2']/P[5]"></isTopic>
+		</analyser>
+	</template>
+</templates>

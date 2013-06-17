@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>_joke/index_</indexof>
+		</rule>
+		<analyser xpath="//DIV[@class='r_c']/DIV[@class='cat_llx']" save="1">
+			<title xpath=".//H3/A/text()"></title>
+			<publishTime xpath=".//DIV[@class='fl']/text()"></publishTime>
+			<content xpath=".//DIV[@id='endtext']"></content>
+			<selflink xpath=".//H3/A/@href" runable="0"></selflink>
+		</analyser>
+		<links>
+<!--			<link regexp="&lt;a href=&quot;(/zz_joke/index_\d+.htm)&quot;&gt;\d+&lt;/a&gt;"-->
+<!--			stopxpath="(//DIV[@class='cat_llx'])[last()]/DIV[@class='fl']"></link>-->
+			<link regexp="&lt;a href=&quot;(/.._joke/index_\d+.htm)&quot;&gt;.下→页.&lt;/a&gt;"
+				stopxpath="(//DIV[@class='cat_llx'])[last()]/DIV[@class='fl']"></link>
+		</links>
+	</template>
+</templates>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>/thread-htm-fid-</indexof>
+			<regexp></regexp>
+			<code></code>
+		</rule>
+		<analyser xpath="//TR[@class='tr3' and count(TD)=5]" save="0">
+			<selflink xpath=".//A[@name='readlinkt' and @href]/@href" stopByXpath="TD[@class='author'][1]//A[@title]/@title" runable="1"></selflink>
+		</analyser>
+		<links>
+			<link regexp="&lt;a href=&quot;(thread-htm-fid-\d+-page-\d+.html)&quot;&gt;下一页&lt;/a&gt;" 
+			stopby="//TD[@class='author'][1]//A[@title][last()]/@title"></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<indexof>/read-htm-tid-</indexof>
+			<regexp></regexp>
+			<code></code>
+		</rule>
+		<analyser xpath="//DIV[@class='read_t']" save="1">
+			<title xpath="//DIV[@id='breadCrumb']/A[last()]/text()"></title>
+			<author xpath=".//DIV[@class='readName b']/A/text()"></author>
+			<publishTime xpath=".//DIV[@class='tipTop s6']/SPAN[@title]/@title"></publishTime>
+			<content xpath=".//DIV[@class='tpc_content']/DIV/text()"></content>
+			<selfLink runable="1"></selfLink>
+			<isTopic></isTopic>
+		</analyser>
+		<links>
+			<link regexp="&lt;a href=&quot;(thread-htm-fid-\d+-page-\d+.html)&quot;&gt;下一页&lt;/a&gt;" 
+			stopby="//TD[@class='author'][1]//A[@title][last()]/@title"></link>
+		</links>
+	</template>
+</templates>

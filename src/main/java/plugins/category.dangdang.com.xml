@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<indexof>category.dangdang.com/cid</indexof>
+		</rule>
+		<links>
+			<link regexp="href=&quot;(http://product.dangdang.com/product.aspx\?product_id=\d+).*?&quot;"></link>
+		</links>
+	</template>
+</templates>

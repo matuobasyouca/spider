@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+	<template>
+		<rule>
+			<regexp>www\.5nd\.com/5nd\_\d+\.htm</regexp>
+		</rule>
+		<links>
+			<link regexp="&lt;a href=&quot;(www\.5nd\.com/5nd\_\d+\.htm)&quot;&gt;[^&gt;]+&lt;/a&gt;"
+				></link>
+			<link regexp="&lt;a href=(s/\d+.htm)&gt;[^&gt;]+&lt;/a&gt;"
+				></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<regexp>www\.5nd\.com/s/\d+\.htm</regexp>
+		</rule>
+		<links>
+			<link regexp="&lt;a href=&quot;(/m/\d+.htm)&quot;&gt;[^&gt;]+&lt;/a&gt;"></link>
+		</links>
+	</template>
+	<template>
+		<rule>
+			<regexp>www\.5nd\.com/m/\d+\.htm</regexp>
+		</rule>
+		<links>
+			<link regexp="&lt;a target=&quot;\_blank d&quot; href=&quot;(/mp3/\d+.htm)&quot;&gt;下载&lt;/a&gt;"></link>
+		</links>
+	</template>
+	<template classname="plugins.music.fivend.FivendMusicDownload">
+	</template>
+</templates>
