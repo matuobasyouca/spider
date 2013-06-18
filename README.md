@@ -3,7 +3,7 @@ spider
 
 a simple distributed spider in Java. 
 
-Java编写的一个简单分布式爬虫.
+Java编写的一个简单分布式爬虫.支持模板插件化，以xml形式或java编码形式编写。
 
 dependency:com.meiya.base.mipatch download from https://github.com/matuobasyouca/e-shark-k;
 
