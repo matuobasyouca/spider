@@ -42,4 +42,5 @@ java com.zhangwoo.spider.client.process.SpiderProcess
 添加任务：
 http://localhost:30090/spider/managerTask.jsp 填写任务名称和任务地址就能够添加一个任务。
 只要有插件支持就可以解析并返回结果入库。
+测试任务可以使用：http://www.haha365.com/fqxh/
 
